@@ -1,22 +1,23 @@
-#include<stdio.h>
+#include<iostream>
+using namespace std;
 
 int main()
 {
     int a;
     int acum=0;
     int s=0;
-    printf("introduce un número");
-    scanf("%d",&a);
+    std::cout << "introduce un numero: ";
+    std::cin >> a;
     while(a>0)
     {
     s+=a;
     acum++;
-    printf("anota un numero");
-    scanf("%d",&a);
+    std::cout << ("anota un numero: ");
+    std::cin >> a;
     
     }
-    printf("tu cantidad de num ingresados es: %d\n", acum);
-    printf("se ingresaron un total de %d números \n ", s);
+    std::cout << "tu cantidad de num ingresados es:" << acum << std::endl;
+    std::cout << "se ingresaron un total de " << s << " numeros" << std::endl;
     
     return 0;
 }
