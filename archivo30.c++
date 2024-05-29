@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>  // Necesario para std::reverse
+#include <algorithm>  
 
 using namespace std;
 
@@ -27,7 +27,7 @@ vector<int> leerNumeros() {
 int main() {
     vector<int> vectorInverso = leerNumeros();
     
-    // Invertir el vector
+    
     reverse(vectorInverso.begin(), vectorInverso.end());
     
     cout << "Vector en orden inverso: ";
