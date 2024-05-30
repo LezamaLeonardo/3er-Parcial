@@ -1,39 +1,28 @@
-#include <stdio.h>
+#include <iostream>
+#include <limits.h>
 
-#define FILAS 4
-#define COLUMNAS 3
+using namespace std;
 
 int main() {
-    int matriz[FILAS][COLUMNAS];
-    int sumas[COLUMNAS] = {0};
-    int i, j;
+    int tabla[4][3];
+    int sumaColumnas[3] = {0, 0, 0};
+    int mayorSuma = INT_MIN;
 
-    
-    printf("Ingrese los valores de la matriz de %d filas por %d columnas:\n", FILAS, COLUMNAS);
-    for (i = 0; i < FILAS; i++) {
-        for (j = 0; j < COLUMNAS; j++) {
-            printf("Elemento [%d][%d]: ", i, j);
-            scanf("%d", &matriz[i][j]);
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << "Introduce un valor para la posición [" << i << "][" << j << "]: ";
+            cin >> tabla[i][j];
+            sumaColumnas[j] += tabla[i][j];
         }
     }
 
-    
-    for (j = 0; j < COLUMNAS; j++) {
-        for (i = 0; i < FILAS; i++) {
-            sumas[j] += matriz[i][j];
+    for (int j = 0; j < 3; j++) {
+        if (sumaColumnas[j] > mayorSuma) {
+            mayorSuma = sumaColumnas[j];
         }
     }
 
-    
-    int max_suma = sumas[0];
-    for (j = 1; j < COLUMNAS; j++) {
-        if (sumas[j] > max_suma) {
-            max_suma = sumas[j];
-        }
-    }
-
-   
-    printf("La mayor de las sumas de las columnas es: %d\n", max_suma);
+    cout << "La mayor de las sumas de las columnas es: " << mayorSuma << endl;
 
     return 0;
 }
