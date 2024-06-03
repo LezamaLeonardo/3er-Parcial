@@ -1,3 +1,6 @@
+//Marca con error su programa. main.c:1:10: fatal error:  iostream: No such file or directory
+//modificar el programa para que ordene en descendente
+
 #include <iostream>
 using namespace std;
 
