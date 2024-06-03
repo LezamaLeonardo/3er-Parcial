@@ -1,19 +1,20 @@
 #include <iostream>
+using namespace std;
 
 int main() {
     int n,m;
 
-    std::cout << "Digite el número de filas: ";
-    std::cin >> n;
-    std::cout << "Digite el número de columnas: ";
-    std::cin >> m;
+    cout << "Digite el número de filas: ";
+    cin >> n;
+    cout << "Digite el número de columnas: ";
+    cin >> m;
 
     int matriz[n][m];
 
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
-            std::cout << "Digite dato para la fila " << i+1 << " y columna " << j+1 << ": ";
-            std::cin >> matriz[i][j];
+            cout << "Digite dato para la fila " << i+1 << " y columna " << j+1 << ": ";
+            cin >> matriz[i][j];
         }
     }
 
@@ -26,7 +27,7 @@ int main() {
     }
 
     for (int j = 0; j < m; ++j) {
-        std::cout << "La suma de los elementos de la columna " << j+1 << " es: " << sumaColumnas[j] << std::endl;
+        cout << "La suma de los elementos de la columna " << j+1 << " es: " << sumaColumnas[j] << endl;
     }
 
     return 0;
