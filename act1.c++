@@ -1,5 +1,4 @@
-//ingrese un solo numero de tres cifras
-//Abreviar std:cout
+
 
 #include <iostream>
 
