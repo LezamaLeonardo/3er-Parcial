@@ -1,3 +1,5 @@
+// agregar mayor 
+// si hay iguales
 #include <iostream>
 using namespace std;
 
